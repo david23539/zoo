@@ -5,7 +5,7 @@ var md_auth = require ('../middlewares/autenticate');
 var md_admin = require ('../middlewares/is_admin');
 var api = express.Router();
 var multipart = require('connect-multiparty');
-var md_upload = multipart({uploadDir:'./curso-angular4-avanzado-backend/uploads/animals'});
+var md_upload = multipart({uploadDir:'./uploads/animals'});
 
 api.get('/pruebas-animales', md_auth.ensureAuth, AnimalController.pruebas);
 api.get('/animal', AnimalController.getAnimals);

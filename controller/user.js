@@ -145,9 +145,9 @@ function uploadImage(req, res) {
     var filename = 'No subido';
     if(req.files){
       var file_path = req.files.image.path;
+      console.log(file_path);
       var file_split = file_path.split('/');
-      var filename = file_split[3];
-      console.dir(filename);
+      var filename = file_split[3];      
       var ext_split = filename.split('/.');
       var file_ext = ext_split[1];
       if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif'){

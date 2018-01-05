@@ -145,12 +145,13 @@ function uploadImage(req, res) {
     var filename = 'No subido';
     if(req.files){
       var file_path = req.files.image.path;
-      console.log(file_path);
+      
       var file_split = file_path.split('/');
       var filename = file_split[2];
-      console.log(filename);      
+            
       var ext_split = filename.split('/.');
       var file_ext = ext_split[1];
+      console.log(file_ext);
       if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif'){
           if(userId != req.user.sub){
               return res.status(500).send({message:'No tienes permiso para actualizar un usuario'});

@@ -150,6 +150,7 @@ function uploadImage(req, res) {
       var filename = file_split[2];
             
       var ext_split = filename.split('/.');
+      console.log(ext_split);
       var file_ext = ext_split[1];
       console.log(file_ext);
       if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif'){
